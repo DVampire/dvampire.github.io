@@ -1,0 +1,13 @@
+# Jekyll 构建产物（GitHub 会在云端重新构建，不要提交）
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# 系统与编辑器
+.DS_Store
+*.swp
+*.swo
+*~
+
+# 依赖（可选，保留 Gemfile.lock 便于 GitHub 构建一致）
+# Gemfile.lock

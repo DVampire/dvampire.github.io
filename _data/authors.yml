@@ -1,0 +1,6 @@
+# 默认作者，用于侧栏社交图标
+default:
+  name:    Hydejack
+  twitter: jekyllrb
+  github:  qwtel
+  email:   mail@example.com
