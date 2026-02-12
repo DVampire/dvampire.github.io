@@ -1,11 +1,9 @@
 ---
 layout: default
-title: About
+title: About Me
 permalink: /about/
-description: About Wentao Zhang
+description: Wentao Zhang -- Research Associate at NTU, working on LLM Agents and Financial AI.
 ---
-
-# About Me
 
 Hi! I am Wentao Zhang, currently a Research Associate at [Nanyang Technological University](https://www.ntu.edu.sg/), where I am fortunate to be advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/). Prior to this, I worked as a Research Engineer at [Skywork AI 2050 Research](https://github.com/SkyworkAI) (Nov 2024 -- Feb 2026), focusing on LLM-powered multi-agent systems. Before that, I also served as a Research Associate with Prof. Bo An at NTU (Nov 2022 -- Nov 2024). I received my Master's degree in Computer Science from Nanjing University and my Bachelor's degree from Tianjin University of Finance and Economics.
 
