@@ -1,6 +1,5 @@
 # 默认作者，用于侧栏社交图标
 default:
-  name:    Hydejack
-  twitter: jekyllrb
-  github:  qwtel
-  email:   mail@example.com
+  name:    Wentao Zhang
+  github:  https://github.com/DVampire
+  email:   zhangwent963@gmail.com
