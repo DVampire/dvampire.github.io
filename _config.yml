@@ -3,28 +3,25 @@ url:                   https://dvampire.github.io
 baseurl:               ""
 
 lang:                  en
-title:                 Hydejack
-tagline:               A boutique Jekyll theme
-description:           A boutique Jekyll theme for bloggers and portfolio.
-copyright:             © 2024. All rights reserved.
+title:                 Wentao Zhang
+tagline:               Welcome to my homepage
+description:           Wentao Zhang's personal homepage.
+copyright:             © 2026. Wentao Zhang. All rights reserved.
 
-# 社交链接（侧栏底部图标：GitHub / X / Email 等）
-twitter:               jekyllrb
-github:                qwtel
-email:                 mail@example.com
+# 社交链接（侧栏底部图标）
+github:                https://github.com/DVampire
+email:                 zhangwent963@gmail.com
 
-# 侧栏导航链接（对应首页 Blog / Showcase / Résumé / Documentation / Download）
+# 侧栏导航链接
 menu:
+  - title: About
+    url: /about/
+  - title: Research
+    url: /research/
+  - title: Publications
+    url: /publications/
   - title: Blog
     url: /blog/
-  - title: Showcase
-    url: /showcase/
-  - title: Résumé
-    url: /resume/
-  - title: Documentation
-    url: /docs/
-  - title: Download
-    url: /download/
 
 accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
