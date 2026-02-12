@@ -5,20 +5,28 @@ permalink: /about/
 description: About Wentao Zhang
 ---
 
-I am **Wentao Zhang**, currently a Research Engineer at **Skywork AI 2050 Research** in Singapore. Prior to this, I worked as a Research Associate at **Nanyang Technological University** (Nov 2022 -- Nov 2024) and as an Algorithm Engineer at **China Life Insurance Co., Ltd** (Aug 2020 -- Oct 2022).
+# About Me
 
-## Research Interests
+Hi! I am Wentao Zhang, currently a Research Associate at [Nanyang Technological University](https://www.ntu.edu.sg/), where I am fortunate to be advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/). Prior to this, I worked as a Research Engineer at [Skywork AI 2050 Research](https://github.com/SkyworkAI) (Nov 2024 -- Feb 2026), focusing on LLM-powered multi-agent systems. Before that, I also served as a Research Associate with Prof. Bo An at NTU (Nov 2022 -- Nov 2024). I received my Master's degree in Computer Science from Nanjing University and my Bachelor's degree from Tianjin University of Finance and Economics.
 
-My research lies at the intersection of **large language models (LLMs)**, **multi-agent systems**, **FinTech**, **quantitative trading**, **reinforcement learning**, and **deep learning**. I am particularly interested in:
+My research primarily focuses on **LLM-powered autonomous agents** and **Financial AI (AI4Finance)**. I have worked on building hierarchical multi-agent frameworks for complex, long-horizon tasks such as web navigation, data analysis, and general computer control. I am also passionate about applying AI techniques -- including deep learning, reinforcement learning, and large language models -- to financial applications such as algorithmic trading, portfolio management, and end-to-end FinTech platforms.
 
-- **LLM-powered autonomous agents** -- designing hierarchical multi-agent frameworks for complex, long-horizon tasks (e.g., web navigation, data analysis, general computer control).
-- **Financial AI** -- building end-to-end platforms and intelligent agents for forecasting, trading, and portfolio management with multimodal data integration.
-- **Reinforcement learning** -- applying RL techniques to real-world decision-making problems such as high-frequency trading and portfolio optimization.
+Research keywords include: **LLM Agents**, **Multi-Agent Systems**, **AI4Finance**, **Reinforcement Learning**, **Quantitative Trading**.
 
 ## Education
 
 - **M.S. in Computer Science and Technology**, Nanjing University, China (Sep 2017 -- Jun 2020)
 - **B.S. in Computer Science and Technology**, Tianjin University of Finance and Economics, China (Sep 2013 -- Jun 2017)
+
+## Experience
+
+- **Research Associate**, Nanyang Technological University, Singapore (Feb 2026 -- Present)
+  - Advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/)
+- **Research Engineer**, Skywork AI 2050 Research, Singapore (Nov 2024 -- Feb 2026)
+  - LLM-powered multi-agent systems and Financial AI
+- **Research Associate**, Nanyang Technological University, Singapore (Nov 2022 -- Nov 2024)
+  - Advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/)
+- **Algorithm Engineer**, China Life Insurance Co., Ltd, Beijing, China (Aug 2020 -- Oct 2022)
 
 ## Contact
 
