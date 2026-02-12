@@ -90,3 +90,15 @@ compress_html:
 
 sass:
   style:               compressed
+
+# 排除不需要 Jekyll 处理的文件/文件夹
+exclude:
+  - licenses
+  - LICENSE.md
+  - NOTICE.md
+  - README.md
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - jekyll-theme-hydejack.gemspec
+  - node_modules
