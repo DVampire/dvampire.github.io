@@ -5,8 +5,6 @@ permalink: /about/
 description: About Wentao Zhang
 ---
 
-# About Me
-
 I am **Wentao Zhang**, currently a Research Engineer at **Skywork AI 2050 Research** in Singapore. Prior to this, I worked as a Research Associate at **Nanyang Technological University** (Nov 2022 -- Nov 2024) and as an Algorithm Engineer at **China Life Insurance Co., Ltd** (Aug 2020 -- Oct 2022).
 
 ## Research Interests
