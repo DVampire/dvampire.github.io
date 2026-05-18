@@ -86,7 +86,7 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 <div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2403.03186" target="_blank">Cradle: Empowering Foundation Agents towards General Computer Control</a></div>
   <div class="pub-authors">Weihao Tan, <strong>Wentao Zhang</strong>, Xinrun Xu, Haochong Xia, Ziluo Ding, Boyu Li, Bohan Zhou, Junpeng Yue, Jiechuan Jiang, Yewen Li, Ruyi An, Molei Qin, Chuqiao Zong, Longtao Zheng, Yujie Wu, Xiaoqiang Chai, Yifei Bi, Tianbao Xie, Pengjie Gu, Xiyun Li, Ceyao Zhang, Long Tian, Chaojie Wang, Xinrun Wang, Börje F. Karlsson, Bo An, Shuicheng Yan, Zongqing Lu</div>
-  <div class="pub-venue">arXiv preprint arXiv:2403.03186</div>
+  <div class="pub-venue"><span class="venue-badge">ICML 2025</span></div>
   <div class="pub-links">
     <a href="https://arxiv.org/abs/2403.03186" target="_blank">Paper</a>
     <a href="https://github.com/BAAI-Agents/Cradle" target="_blank">GitHub</a>
@@ -97,7 +97,7 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 <div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2401.14151" target="_blank">TWOSOME: True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning</a></div>
   <div class="pub-authors">Weihao Tan, <strong>Wentao Zhang</strong>, Shanqi Liu, Longtao Zheng, Xinrun Wang, Bo An</div>
-  <div class="pub-venue">arXiv preprint arXiv:2401.14151</div>
+  <div class="pub-venue"><span class="venue-badge">ICLR 2024</span></div>
   <div class="pub-links"><a href="https://arxiv.org/abs/2401.14151" target="_blank">Paper</a></div>
 </div>
 

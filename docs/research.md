@@ -46,7 +46,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
 </div>
 
 <div class="project-card featured reveal reveal-delay-3">
-  <span class="feature-badge badge-blue">Featured · Computer Control</span>
+  <span class="feature-badge badge-blue">Featured · ICML 2025</span>
   <h3>Cradle: Empowering Foundation Agents towards General Computer Control</h3>
   <p>How do you build an agent that can use <em>any</em> computer software — without task-specific APIs or hand-coded integrations?</p>
   <p>Cradle's answer: treat the screen as the universal interface. Agents receive screenshots as input and produce keyboard and mouse actions as output — exactly how humans interact with computers. This unlocks operation across arbitrary software: games (Red Dead Redemption 2, Stardew Valley, Cities: Skylines), browsers, email clients, and creative tools — all with the same agent.</p>
