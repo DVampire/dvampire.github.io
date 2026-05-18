@@ -15,7 +15,8 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 
 **AlphaForgeBench: Benchmarking End-to-End Trading Strategy Design with Large Language Models**
 Wentao Zhang, Mingxuan Zhao, Jincheng Gao, Jieshun You, Huaiyu Jia, Yilei Zhao, Bo An, Shuo Sun
-*arXiv preprint arXiv:2602.18481*
+*Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (**KDD 2026**)*
+<span style="color:#e74c3c; font-weight:bold;">KDD 2026</span>
 [[Paper]](https://arxiv.org/abs/2602.18481)
 
 ---
