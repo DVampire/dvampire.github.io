@@ -1,5 +1,5 @@
-# 默认作者，用于侧栏社交图标
 default:
   name:    Wentao Zhang
+  picture: /assets/img/profile.webp
   github:  https://github.com/DVampire
   email:   zhangwent963@gmail.com

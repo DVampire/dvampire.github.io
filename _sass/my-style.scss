@@ -1,0 +1,238 @@
+/* =============================================
+   Scroll-reveal fade-in animation
+   ============================================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeInUp 0.55s ease forwards;
+}
+
+.reveal-1 { animation-delay: 0.05s; }
+.reveal-2 { animation-delay: 0.15s; }
+.reveal-3 { animation-delay: 0.25s; }
+.reveal-4 { animation-delay: 0.35s; }
+.reveal-5 { animation-delay: 0.45s; }
+
+/* =============================================
+   Sidebar avatar glow
+   ============================================= */
+.avatar img {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .avatar {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(79, 177, 186, 0.5);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 5px rgba(79, 177, 186, 0.9), 0 0 20px rgba(79, 177, 186, 0.4);
+  }
+}
+
+/* =============================================
+   Stat cards (homepage)
+   ============================================= */
+.stat-cards {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 120px;
+  background: var(--body-bg, #fff);
+  border: 1px solid rgba(79, 177, 186, 0.25);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(79, 177, 186, 0.18);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(79, 177, 186);
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* =============================================
+   Publication cards
+   ============================================= */
+.pub-card {
+  border-left: 3px solid rgb(79, 177, 186);
+  background: var(--body-bg, #fff);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 16px rgba(79, 177, 186, 0.15);
+    border-left-color: rgb(25, 55, 71);
+  }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 0.97rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover { color: rgb(79, 177, 186); }
+    }
+  }
+
+  .pub-authors {
+    font-size: 0.83rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-authors strong {
+    color: #333;
+  }
+
+  .pub-venue {
+    font-size: 0.82rem;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-links {
+    font-size: 0.82rem;
+
+    a {
+      display: inline-block;
+      margin-right: 0.6rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(79, 177, 186, 0.4);
+      color: rgb(79, 177, 186);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+
+      &:hover {
+        background: rgb(79, 177, 186);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pub-year-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(25, 55, 71);
+  border-bottom: 2px solid rgba(79, 177, 186, 0.3);
+  padding-bottom: 0.3rem;
+  margin: 2rem 0 1rem;
+}
+
+.venue-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgb(79, 177, 186);
+  color: #fff;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+}
+
+/* =============================================
+   Research project cards
+   ============================================= */
+.project-card {
+  border: 1px solid rgba(79, 177, 186, 0.2);
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(79, 177, 186, 0.15);
+  }
+
+  &.featured {
+    border-left: 4px solid rgb(79, 177, 186);
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+  }
+
+  .project-links {
+    margin-top: 0.8rem;
+    font-size: 0.83rem;
+
+    a {
+      display: inline-block;
+      margin-right: 0.6rem;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(79, 177, 186, 0.4);
+      color: rgb(79, 177, 186);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+
+      &:hover {
+        background: rgb(79, 177, 186);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.feature-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+
+  &.badge-red   { background: #e74c3c; }
+  &.badge-blue  { background: #2980b9; }
+  &.badge-teal  { background: rgb(79, 177, 186); }
+}

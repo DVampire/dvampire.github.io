@@ -7,112 +7,123 @@ description: Wentao Zhang's research on LLM Agents, Self-Evolving Agents, and Fi
 
 # Research
 
-My research sits at the intersection of **LLM-powered autonomous agents** and **Financial AI (AI4Finance)**. A central theme of my recent work is **agent self-evolution** — building systems that continuously improve themselves through closed-loop experience, resource versioning, and protocol-level self-modification.
+<div class="reveal reveal-1">
+My research sits at the intersection of <strong>LLM-powered autonomous agents</strong> and <strong>Financial AI (AI4Finance)</strong>. A central theme is <strong>agent self-evolution</strong> — building systems that continuously improve themselves through closed-loop experience, resource versioning, and protocol-level self-modification.
+</div>
 
 ---
 
 ## Research Themes
 
-- **Self-Evolving Agents** — Designing protocols and architectures that allow agents to evolve their own prompts, tools, memory, and sub-agent configurations autonomously, without human intervention
-- **LLM Agents & Multi-Agent Orchestration** — Hierarchical frameworks, tool use, long-horizon planning, and standardized agent communication protocols
-- **General Computer Control** — Foundation agents that operate arbitrary software using only pixels and natural language, with no task-specific APIs
-- **AI4Finance** — End-to-end financial platforms, algorithmic trading, portfolio management, and high-frequency trading via RL and LLMs
-- **Reinforcement Learning** — Deep RL for sequential decision-making in complex, partially observable environments
+<div class="reveal reveal-2">
+<ul>
+  <li><strong>Self-Evolving Agents</strong> — Protocols and architectures enabling agents to evolve their own prompts, tools, memory, and sub-agents autonomously</li>
+  <li><strong>LLM Agents &amp; Multi-Agent Orchestration</strong> — Hierarchical frameworks, tool use, long-horizon planning, and standardized agent communication protocols</li>
+  <li><strong>General Computer Control</strong> — Foundation agents that operate arbitrary software using only pixels and natural language</li>
+  <li><strong>AI4Finance</strong> — End-to-end financial platforms, algorithmic trading, portfolio management, and HFT via RL and LLMs</li>
+  <li><strong>Reinforcement Learning</strong> — Deep RL for sequential decision-making in complex, partially observable environments</li>
+</ul>
+</div>
 
 ---
 
 ## Featured Projects
 
-### Autogenesis: A Self-Evolving Agent Protocol
-<span style="background:#e74c3c; color:white; padding:2px 8px; border-radius:4px; font-size:0.85em;">Featured · Self-Evolution</span>
+<div class="project-card featured reveal reveal-3">
+  <span class="feature-badge badge-red">Featured · Self-Evolution</span>
+  <h3>Autogenesis: A Self-Evolving Agent Protocol</h3>
+  <p>Autogenesis addresses a fundamental limitation of current LLM agent systems: they are static — prompts, tools, and behaviors fixed at design time cannot improve from experience.</p>
+  <p>Two tightly coupled layers power the system:</p>
+  <ul>
+    <li><strong>Resource Substrate Protocol Layer</strong> — models prompts, agents, tools, and memory as <em>versioned resources</em> with explicit lifecycles, enabling safe mutation and rollback</li>
+    <li><strong>Self-Evolution Protocol Layer</strong> — a closed-loop system where the agent monitors its own performance, identifies failure modes, and autonomously rewrites its own resources to improve</li>
+  </ul>
+  <p>The result is an agent that gets measurably better at complex planning and tool-use tasks through runtime self-modification — without human intervention.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2604.15034" target="_blank">Paper</a>
+    <a href="https://github.com/DVampire/Autogenesis" target="_blank">GitHub</a>
+  </div>
+</div>
 
-Autogenesis addresses a fundamental limitation of current LLM agent systems: they are static — their prompts, tools, and behaviors are fixed at design time and cannot improve from experience.
+<div class="project-card featured reveal reveal-3">
+  <span class="feature-badge badge-blue">Featured · Computer Control</span>
+  <h3>Cradle: Empowering Foundation Agents towards General Computer Control</h3>
+  <p>How do you build an agent that can use <em>any</em> computer software — without task-specific APIs or hand-coded integrations?</p>
+  <p>Cradle's answer: treat the screen as the universal interface. Agents receive screenshots as input and produce keyboard and mouse actions as output — exactly how humans interact with computers. This unlocks operation across arbitrary software: games (Red Dead Redemption 2, Stardew Valley, Cities: Skylines), browsers, email clients, and creative tools — all with the same agent.</p>
+  <p>Cradle also incorporates <strong>self-improvement</strong>: agents curate and refine a skill library from past experience, enabling progressive capability growth on new tasks.</p>
+  <p>⭐ 2.5k GitHub stars</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2403.03186" target="_blank">Paper</a>
+    <a href="https://github.com/BAAI-Agents/Cradle" target="_blank">GitHub</a>
+    <a href="https://baai-agents.github.io/Cradle/" target="_blank">Project Page</a>
+  </div>
+</div>
 
-Autogenesis introduces two tightly coupled layers:
-- **Resource Substrate Protocol Layer** — models prompts, agents, tools, and memory as *versioned resources* with explicit lifecycles, enabling safe mutation and rollback
-- **Self-Evolution Protocol Layer** — a closed-loop system where the agent monitors its own performance, identifies failure modes, and autonomously rewrites its own resources to improve
+<div class="project-card reveal reveal-4">
+  <span class="feature-badge badge-teal">Multi-Agent · GAIA SOTA</span>
+  <h3>AgentOrchestra: Hierarchical Multi-Agent Orchestration with the TEA Protocol</h3>
+  <p>The Tool-Environment-Agent (TEA) protocol treats environments, agents, and tools as <strong>first-class resources</strong> with explicit lifecycles and versioned interfaces — solving the fragile, ad-hoc wiring that plagues most multi-agent systems.</p>
+  <p>AgentOrchestra builds on TEA with a central planner that dynamically spawns and coordinates specialist sub-agents (web navigation, data analysis, file operations). It achieves <strong>89.04% on GAIA</strong>, establishing state-of-the-art performance on general-purpose agent benchmarks.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2506.12508" target="_blank">Paper</a>
+  </div>
+</div>
 
-The result is an agent that gets measurably better at complex planning and tool-use tasks through runtime self-modification — without human intervention.
+<div class="project-card reveal reveal-4">
+  <span class="feature-badge badge-teal">KDD 2024</span>
+  <h3>FinAgent: A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist</h3>
+  <p>A <strong>tool-augmented, diversified, and generalist</strong> multimodal agent for financial trading that integrates heterogeneous data sources (price, news, filings) and diverse trading tools, achieving state-of-the-art results across multiple financial benchmarks.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2402.18485" target="_blank">Paper</a>
+    <a href="https://github.com/DVampire/FinAgent" target="_blank">GitHub</a>
+  </div>
+</div>
 
-[[Paper]](https://arxiv.org/abs/2604.15034) &nbsp;|&nbsp; [[GitHub]](https://github.com/DVampire/Autogenesis)
+<div class="project-card reveal reveal-5">
+  <span class="feature-badge badge-teal">KDD 2026</span>
+  <h3>FinWorld: End-to-End Financial AI Platform</h3>
+  <p>An <strong>all-in-one open-source platform</strong> for financial AI research and deployment, integrating data pipelines, model training, backtesting, and live deployment over 800M+ multimodal data samples from 1995–2025. Lowers the barrier for rigorous, reproducible AI4Finance research.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2508.02292" target="_blank">Paper</a>
+    <a href="https://github.com/DVampire/FinWorld" target="_blank">GitHub</a>
+    <a href="https://dvampire.github.io/FinWorld/" target="_blank">Project Page</a>
+  </div>
+</div>
 
----
+<div class="project-card reveal reveal-5">
+  <span class="feature-badge badge-teal">NeurIPS 2023</span>
+  <h3>TradeMaster: A Holistic Quantitative Trading Platform Empowered by Reinforcement Learning</h3>
+  <p>A holistic platform covering data processing, environment simulation, RL agent training, and performance evaluation across multiple financial markets and trading tasks.</p>
+  <p>⭐ 2.7k GitHub stars</p>
+  <div class="project-links">
+    <a href="https://personal.ntu.edu.sg/boan/papers/NeurIPS_23_TradeMaster.pdf" target="_blank">Paper</a>
+    <a href="https://github.com/TradeMaster-NTU/TradeMaster" target="_blank">GitHub</a>
+  </div>
+</div>
 
-### Cradle: Empowering Foundation Agents towards General Computer Control
-<span style="background:#2980b9; color:white; padding:2px 8px; border-radius:4px; font-size:0.85em;">Featured · Computer Control</span>
+<div class="project-card reveal reveal-5">
+  <span class="feature-badge badge-teal">AAAI 2024</span>
+  <h3>EarnHFT: Efficient Hierarchical Reinforcement Learning for High-Frequency Trading</h3>
+  <p>Decomposes the HFT problem into macro-level strategy selection and micro-level order execution. The hierarchical structure yields significantly improved sample efficiency and live-trading profitability.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2309.12891" target="_blank">Paper</a>
+  </div>
+</div>
 
-How do you build an agent that can use *any* computer software — without task-specific APIs or hand-coded integrations?
+<div class="project-card reveal reveal-5">
+  <span class="feature-badge badge-teal">WWW 2024</span>
+  <h3>EarnMore: Portfolio Management in Customizable Stock Pools</h3>
+  <p>A maskable stock representation framework that enables RL agents to handle arbitrary stock universes with a single trained model — eliminating the need to retrain per pool.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2311.10801" target="_blank">Paper</a>
+    <a href="https://github.com/DVampire/EarnMore" target="_blank">GitHub</a>
+  </div>
+</div>
 
-Cradle's answer: treat the screen as the universal interface. Agents receive screenshots as input and produce keyboard and mouse actions as output — exactly how humans interact with computers. This minimal assumption unlocks operation across arbitrary software: games (Red Dead Redemption 2, Stardew Valley, Cities: Skylines), browsers, email clients, and creative tools — all with the same agent, zero per-app engineering.
-
-Cradle also incorporates **self-improvement**: agents curate and refine a skill library from past experience, enabling progressive capability growth on new tasks.
-
-> ⭐ 2.5k GitHub stars
-
-[[Paper]](https://arxiv.org/abs/2403.03186) &nbsp;|&nbsp; [[GitHub]](https://github.com/BAAI-Agents/Cradle) &nbsp;|&nbsp; [[Project Page]](https://baai-agents.github.io/Cradle/)
-
----
-
-### AgentOrchestra: Hierarchical Multi-Agent Orchestration with the TEA Protocol
-
-The Tool-Environment-Agent (TEA) protocol treats environments, agents, and tools as **first-class resources** with explicit lifecycles and versioned interfaces — solving the fragile, ad-hoc wiring that plagues most multi-agent systems.
-
-AgentOrchestra builds on TEA with a central planner that dynamically spawns and coordinates specialist sub-agents (web navigation, data analysis, file operations). It achieves **89.04% on GAIA**, establishing state-of-the-art performance on general-purpose agent benchmarks.
-
-[[Paper]](https://arxiv.org/abs/2506.12508)
-
----
-
-### FinAgent: A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist
-
-A **tool-augmented, diversified, and generalist** multimodal agent for financial trading that integrates heterogeneous data sources (price, news, filings) and diverse trading tools, achieving state-of-the-art results across multiple financial benchmarks.
-
-*KDD 2024*
-[[Paper]](https://arxiv.org/abs/2402.18485) &nbsp;|&nbsp; [[GitHub]](https://github.com/DVampire/FinAgent)
-
----
-
-### FinWorld: End-to-End Financial AI Platform
-
-An **all-in-one open-source platform** for financial AI research and deployment, integrating data pipelines, model training, backtesting, and live deployment. Lowers the barrier for rigorous, reproducible AI4Finance research.
-
-*KDD 2026*
-[[Paper]](https://arxiv.org/abs/2508.02292) &nbsp;|&nbsp; [[GitHub]](https://github.com/DVampire/FinWorld) &nbsp;|&nbsp; [[Project Page]](https://dvampire.github.io/FinWorld/)
-
----
-
-### TradeMaster: Quantitative Trading Platform via RL
-
-A holistic platform covering data processing, environment simulation, RL agent training, and performance evaluation across multiple financial markets and trading tasks.
-
-*NeurIPS 2023*
-
-> ⭐ 2.7k GitHub stars
-
-[[Paper]](https://personal.ntu.edu.sg/boan/papers/NeurIPS_23_TradeMaster.pdf) &nbsp;|&nbsp; [[GitHub]](https://github.com/TradeMaster-NTU/TradeMaster)
-
----
-
-### True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning
-
-Aligns LLMs with interactive environments through reinforcement learning, enabling agents to acquire genuine knowledge through embodied practice rather than passive pretraining.
-
-[[Paper]](https://arxiv.org/abs/2401.14151)
-
----
-
-### EarnHFT: Hierarchical RL for High-Frequency Trading
-
-Decomposes the HFT problem into macro-level strategy selection and micro-level order execution. The hierarchical structure yields significantly improved sample efficiency and live-trading profitability.
-
-*AAAI 2024*
-[[Paper]](https://arxiv.org/abs/2309.12891)
-
----
-
-### EarnMore: Portfolio Management in Customizable Stock Pools
-
-A maskable stock representation framework that enables RL agents to handle arbitrary stock universes with a single trained model — eliminating the need to retrain per pool.
-
-*WWW 2024*
-[[Paper]](https://arxiv.org/abs/2311.10801) &nbsp;|&nbsp; [[GitHub]](https://github.com/DVampire/EarnMore)
+<div class="project-card reveal reveal-5">
+  <h3>True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning</h3>
+  <p>Aligns LLMs with interactive environments through reinforcement learning, enabling agents to acquire genuine knowledge through embodied practice rather than passive pretraining.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2401.14151" target="_blank">Paper</a>
+  </div>
+</div>
