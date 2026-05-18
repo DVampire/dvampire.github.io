@@ -63,7 +63,7 @@ AgentOrchestra builds on TEA with a central planner that dynamically spawns and 
 
 ---
 
-### FinAgent: Multimodal Foundation Agent for Financial Trading
+### FinAgent: A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist
 
 A **tool-augmented, diversified, and generalist** multimodal agent for financial trading that integrates heterogeneous data sources (price, news, filings) and diverse trading tools, achieving state-of-the-art results across multiple financial benchmarks.
 
