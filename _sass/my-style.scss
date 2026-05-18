@@ -294,3 +294,15 @@
   font-size: 0.85rem;
   color: #888;
 }
+
+/* News timeline color variants */
+.timeline-item .news-date-accepted { color: #27ae60; }
+.timeline-item .news-date-released { color: rgb(79, 177, 186); }
+.timeline-item.news-accepted::before {
+  background: #27ae60;
+  box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.4);
+}
+.timeline-item.news-released::before {
+  background: rgb(79, 177, 186);
+  box-shadow: 0 0 0 2px rgba(79, 177, 186, 0.4);
+}
