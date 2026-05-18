@@ -71,6 +71,17 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
   <div class="pub-links"><a href="https://arxiv.org/abs/2506.12508" target="_blank">Paper</a></div>
 </div>
 
+<div class="pub-card">
+  <div class="pub-title"><a href="https://arxiv.org/abs/2403.03186" target="_blank">Cradle: Empowering Foundation Agents towards General Computer Control</a></div>
+  <div class="pub-authors">Weihao Tan, <strong>Wentao Zhang</strong>, Xinrun Xu, Haochong Xia, Ziluo Ding, Boyu Li, Bohan Zhou, Junpeng Yue, Jiechuan Jiang, Yewen Li, Ruyi An, Molei Qin, Chuqiao Zong, Longtao Zheng, Yujie Wu, Xiaoqiang Chai, Yifei Bi, Tianbao Xie, Pengjie Gu, Xiyun Li, Ceyao Zhang, Long Tian, Chaojie Wang, Xinrun Wang, Börje F. Karlsson, Bo An, Shuicheng Yan, Zongqing Lu</div>
+  <div class="pub-venue"><span class="venue-badge">ICML 2025</span></div>
+  <div class="pub-links">
+    <a href="https://arxiv.org/abs/2403.03186" target="_blank">Paper</a>
+    <a href="https://github.com/BAAI-Agents/Cradle" target="_blank">GitHub</a>
+    <a href="https://baai-agents.github.io/Cradle/" target="_blank">Project Page</a>
+  </div>
+</div>
+
 <div class="pub-year-heading">2024</div>
 
 <div class="pub-card">
@@ -80,17 +91,6 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
   <div class="pub-links">
     <a href="https://arxiv.org/abs/2402.18485" target="_blank">Paper</a>
     <a href="https://github.com/DVampire/FinAgent" target="_blank">GitHub</a>
-  </div>
-</div>
-
-<div class="pub-card">
-  <div class="pub-title"><a href="https://arxiv.org/abs/2403.03186" target="_blank">Cradle: Empowering Foundation Agents towards General Computer Control</a></div>
-  <div class="pub-authors">Weihao Tan, <strong>Wentao Zhang</strong>, Xinrun Xu, Haochong Xia, Ziluo Ding, Boyu Li, Bohan Zhou, Junpeng Yue, Jiechuan Jiang, Yewen Li, Ruyi An, Molei Qin, Chuqiao Zong, Longtao Zheng, Yujie Wu, Xiaoqiang Chai, Yifei Bi, Tianbao Xie, Pengjie Gu, Xiyun Li, Ceyao Zhang, Long Tian, Chaojie Wang, Xinrun Wang, Börje F. Karlsson, Bo An, Shuicheng Yan, Zongqing Lu</div>
-  <div class="pub-venue"><span class="venue-badge">ICML 2025</span></div>
-  <div class="pub-links">
-    <a href="https://arxiv.org/abs/2403.03186" target="_blank">Paper</a>
-    <a href="https://github.com/BAAI-Agents/Cradle" target="_blank">GitHub</a>
-    <a href="https://baai-agents.github.io/Cradle/" target="_blank">Project Page</a>
   </div>
 </div>
 
