@@ -40,7 +40,7 @@
 .stat-card {
   flex: 1;
   min-width: 120px;
-  background: var(--body-bg, #fff);
+  background: #fff;
   border: 1px solid rgba(79, 177, 186, 0.25);
   border-radius: 10px;
   padding: 1rem 1.2rem;
@@ -103,7 +103,7 @@
    ============================================= */
 .pub-card {
   border-left: 3px solid rgb(79, 177, 186);
-  background: var(--body-bg, #fff);
+  background: #fff;
   border-radius: 0 8px 8px 0;
   padding: 1rem 1.2rem;
   margin-bottom: 1.2rem;
@@ -187,7 +187,7 @@
    ============================================= */
 .project-card {
   border: 1px solid rgba(79, 177, 186, 0.2);
-  background: var(--body-bg, #fff);
+  background: #fff;
   border-radius: 10px;
   padding: 1.4rem 1.6rem;
   margin-bottom: 1.6rem;
@@ -253,8 +253,9 @@
   top: 6px;
   bottom: 6px;
   width: 2px;
-  background: linear-gradient(to bottom, rgb(79, 177, 186), rgba(79, 177, 186, 0.1));
+  background: rgb(79, 177, 186);
   border-radius: 2px;
+  opacity: 0.6;
 }
 .timeline-item {
   position: relative;
