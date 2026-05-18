@@ -1,13 +1,10 @@
 <script>
 (function() {
-  // ── IntersectionObserver scroll-reveal ──
   function initReveal() {
     var els = document.querySelectorAll('.reveal');
     if (!els.length) return;
 
     if (!('IntersectionObserver' in window)) {
-      // fallback: show all immediately
-      els.forEach(function(el) { el.classList.add('visible'); });
       return;
     }
 
@@ -18,12 +15,14 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0, rootMargin: '0px' });
 
-    els.forEach(function(el) { observer.observe(el); });
+    els.forEach(function(el) {
+      el.classList.add('animate');
+      observer.observe(el);
+    });
   }
 
-  // ── CountUp animation for stat numbers ──
   function countUp(el, target, duration) {
     var start = 0;
     var startTime = null;
@@ -32,7 +31,6 @@
     function step(timestamp) {
       if (!startTime) startTime = timestamp;
       var progress = Math.min((timestamp - startTime) / duration, 1);
-      // ease out cubic
       var eased = 1 - Math.pow(1 - progress, 3);
       var current = eased * target;
       el.textContent = isFloat
@@ -55,7 +53,6 @@
         if (!numEl || numEl.dataset.counted) return;
         numEl.dataset.counted = '1';
         var raw = numEl.textContent.trim();
-        // handle suffixes like "5+"
         var suffix = raw.replace(/[\d.,]/g, '');
         var num = parseFloat(raw.replace(/[^\d.]/g, ''));
         if (!isNaN(num)) {
@@ -74,7 +71,6 @@
     initCountUp();
   }
 
-  // Run on initial load and on Hydejack push-state navigation
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

@@ -2,11 +2,15 @@
    Scroll-reveal
    ============================================= */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
-.reveal.visible {
+.reveal.animate {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.reveal.animate.visible {
   opacity: 1;
   transform: translateY(0);
 }
