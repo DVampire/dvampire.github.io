@@ -7,9 +7,9 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 
 # Publications
 
-<p class="reveal reveal-1" style="color:#888; font-size:0.9em;">See also <a href="https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+<p class="reveal reveal-delay-1" style="color:#888; font-size:0.9em;">See also <a href="https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
 
-<div class="reveal reveal-2">
+<div class="reveal reveal-delay-2">
 
 <div class="pub-year-heading">2026</div>
 
@@ -95,7 +95,7 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 </div>
 
 <div class="pub-card">
-  <div class="pub-title"><a href="https://arxiv.org/abs/2401.14151" target="_blank">True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning</a></div>
+  <div class="pub-title"><a href="https://arxiv.org/abs/2401.14151" target="_blank">TWOSOME: True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning</a></div>
   <div class="pub-authors">Weihao Tan, <strong>Wentao Zhang</strong>, Shanqi Liu, Longtao Zheng, Xinrun Wang, Bo An</div>
   <div class="pub-venue">arXiv preprint arXiv:2401.14151</div>
   <div class="pub-links"><a href="https://arxiv.org/abs/2401.14151" target="_blank">Paper</a></div>

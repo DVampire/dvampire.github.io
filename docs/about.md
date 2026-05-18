@@ -5,29 +5,77 @@ permalink: /about/
 description: Wentao Zhang -- Research Associate at NTU, working on LLM Agents and Financial AI.
 ---
 
-Hi! I am Wentao Zhang, currently a Research Associate at [Nanyang Technological University](https://www.ntu.edu.sg/), where I am fortunate to be advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/). Prior to this, I worked as a Research Engineer at [Skywork AI 2050 Research](https://github.com/SkyworkAI) (Nov 2024 -- Feb 2026), focusing on LLM-powered multi-agent systems. Before that, I also served as a Research Associate with Prof. Bo An at NTU (Nov 2022 -- Nov 2024). I received my Master's degree in Computer Science from Nanjing University and my Bachelor's degree from Tianjin University of Finance and Economics.
+<div class="reveal reveal-delay-1">
 
-My research primarily focuses on **LLM-powered autonomous agents** and **Financial AI (AI4Finance)**. I have worked on building hierarchical multi-agent frameworks for complex, long-horizon tasks such as web navigation, data analysis, and general computer control. I am also passionate about applying AI techniques -- including deep learning, reinforcement learning, and large language models -- to financial applications such as algorithmic trading, portfolio management, and end-to-end FinTech platforms.
+Hi! I am **Wentao Zhang**, currently a Research Associate at [Nanyang Technological University](https://www.ntu.edu.sg/), advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/). Prior to this, I worked as a Research Engineer at [Skywork AI 2050 Research](https://github.com/SkyworkAI) (Nov 2024 – Feb 2026), focusing on LLM-powered multi-agent systems. I received my Master's degree in Computer Science from Nanjing University and my Bachelor's degree from Tianjin University of Finance and Economics.
 
-Research keywords include: **LLM Agents**, **Multi-Agent Systems**, **AI4Finance**, **Reinforcement Learning**, **Quantitative Trading**.
+My research primarily focuses on **LLM-powered autonomous agents** and **Financial AI (AI4Finance)**, with a central theme of **agent self-evolution** — building systems that continuously improve themselves through closed-loop experience and protocol-level self-modification. I have worked on building hierarchical multi-agent frameworks for complex, long-horizon tasks such as web navigation, data analysis, and general computer control. I am also passionate about applying AI techniques — including deep reinforcement learning and large language models — to financial applications such as algorithmic trading, portfolio management, and end-to-end FinTech platforms.
 
-## Education
+**Keywords:** LLM Agents &nbsp;·&nbsp; Self-Evolving Agents &nbsp;·&nbsp; Multi-Agent Systems &nbsp;·&nbsp; AI4Finance &nbsp;·&nbsp; Reinforcement Learning &nbsp;·&nbsp; Quantitative Trading
 
-- **M.S. in Computer Science and Technology**, Nanjing University, China (Sep 2017 -- Jun 2020)
-- **B.S. in Computer Science and Technology**, Tianjin University of Finance and Economics, China (Sep 2013 -- Jun 2017)
+</div>
+
+---
 
 ## Experience
 
-- **Research Associate**, Nanyang Technological University, Singapore (Feb 2026 -- Present)
-  - Advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/)
-- **Research Engineer**, Skywork AI 2050 Research, Singapore (Nov 2024 -- Feb 2026)
-  - LLM-powered multi-agent systems and Financial AI
-- **Research Associate**, Nanyang Technological University, Singapore (Nov 2022 -- Nov 2024)
-  - Advised by Prof. [Bo An](https://personal.ntu.edu.sg/boan/)
-- **Algorithm Engineer**, China Life Insurance Co., Ltd, Beijing, China (Aug 2020 -- Oct 2022)
+<div class="timeline reveal reveal-delay-2">
+
+  <div class="timeline-item">
+    <div class="timeline-date">Feb 2026 – Present</div>
+    <div class="timeline-title">Research Associate</div>
+    <div class="timeline-sub">Nanyang Technological University, Singapore &nbsp;·&nbsp; Advised by Prof. <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Bo An</a></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Nov 2024 – Feb 2026</div>
+    <div class="timeline-title">Research Engineer</div>
+    <div class="timeline-sub">Skywork AI 2050 Research, Singapore &nbsp;·&nbsp; LLM-powered multi-agent systems and Financial AI</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Nov 2022 – Nov 2024</div>
+    <div class="timeline-title">Research Associate</div>
+    <div class="timeline-sub">Nanyang Technological University, Singapore &nbsp;·&nbsp; Advised by Prof. <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Bo An</a></div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Aug 2020 – Oct 2022</div>
+    <div class="timeline-title">Algorithm Engineer</div>
+    <div class="timeline-sub">China Life Insurance Co., Ltd, Beijing, China</div>
+  </div>
+
+</div>
+
+---
+
+## Education
+
+<div class="timeline reveal reveal-delay-3">
+
+  <div class="timeline-item">
+    <div class="timeline-date">Sep 2017 – Jun 2020</div>
+    <div class="timeline-title">M.S. in Computer Science and Technology</div>
+    <div class="timeline-sub">Nanjing University, China</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Sep 2013 – Jun 2017</div>
+    <div class="timeline-title">B.S. in Computer Science and Technology</div>
+    <div class="timeline-sub">Tianjin University of Finance and Economics, China</div>
+  </div>
+
+</div>
+
+---
 
 ## Contact
 
+<div class="reveal reveal-delay-4">
+
 - **Email**: [zhangwent963@gmail.com](mailto:zhangwent963@gmail.com)
 - **GitHub**: [github.com/DVampire](https://github.com/DVampire)
+- **Google Scholar**: [Wentao Zhang](https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en)
 - **Location**: Singapore
+
+</div>

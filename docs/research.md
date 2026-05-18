@@ -7,7 +7,7 @@ description: Wentao Zhang's research on LLM Agents, Self-Evolving Agents, and Fi
 
 # Research
 
-<div class="reveal reveal-1">
+<div class="reveal reveal-delay-1">
 My research sits at the intersection of <strong>LLM-powered autonomous agents</strong> and <strong>Financial AI (AI4Finance)</strong>. A central theme is <strong>agent self-evolution</strong> — building systems that continuously improve themselves through closed-loop experience, resource versioning, and protocol-level self-modification.
 </div>
 
@@ -15,7 +15,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
 
 ## Research Themes
 
-<div class="reveal reveal-2">
+<div class="reveal reveal-delay-2">
 <ul>
   <li><strong>Self-Evolving Agents</strong> — Protocols and architectures enabling agents to evolve their own prompts, tools, memory, and sub-agents autonomously</li>
   <li><strong>LLM Agents &amp; Multi-Agent Orchestration</strong> — Hierarchical frameworks, tool use, long-horizon planning, and standardized agent communication protocols</li>
@@ -29,7 +29,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
 
 ## Featured Projects
 
-<div class="project-card featured reveal reveal-3">
+<div class="project-card featured reveal reveal-delay-3">
   <span class="feature-badge badge-red">Featured · Self-Evolution</span>
   <h3>Autogenesis: A Self-Evolving Agent Protocol</h3>
   <p>Autogenesis addresses a fundamental limitation of current LLM agent systems: they are static — prompts, tools, and behaviors fixed at design time cannot improve from experience.</p>
@@ -45,7 +45,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card featured reveal reveal-3">
+<div class="project-card featured reveal reveal-delay-3">
   <span class="feature-badge badge-blue">Featured · Computer Control</span>
   <h3>Cradle: Empowering Foundation Agents towards General Computer Control</h3>
   <p>How do you build an agent that can use <em>any</em> computer software — without task-specific APIs or hand-coded integrations?</p>
@@ -59,7 +59,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-4">
+<div class="project-card reveal reveal-delay-4">
   <span class="feature-badge badge-teal">Multi-Agent · GAIA SOTA</span>
   <h3>AgentOrchestra: Hierarchical Multi-Agent Orchestration with the TEA Protocol</h3>
   <p>The Tool-Environment-Agent (TEA) protocol treats environments, agents, and tools as <strong>first-class resources</strong> with explicit lifecycles and versioned interfaces — solving the fragile, ad-hoc wiring that plagues most multi-agent systems.</p>
@@ -69,7 +69,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-4">
+<div class="project-card reveal reveal-delay-4">
   <span class="feature-badge badge-teal">KDD 2024</span>
   <h3>FinAgent: A Multimodal Foundation Agent for Financial Trading: Tool-Augmented, Diversified, and Generalist</h3>
   <p>A <strong>tool-augmented, diversified, and generalist</strong> multimodal agent for financial trading that integrates heterogeneous data sources (price, news, filings) and diverse trading tools, achieving state-of-the-art results across multiple financial benchmarks.</p>
@@ -79,7 +79,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-5">
+<div class="project-card reveal reveal-delay-5">
   <span class="feature-badge badge-teal">KDD 2026</span>
   <h3>FinWorld: End-to-End Financial AI Platform</h3>
   <p>An <strong>all-in-one open-source platform</strong> for financial AI research and deployment, integrating data pipelines, model training, backtesting, and live deployment over 800M+ multimodal data samples from 1995–2025. Lowers the barrier for rigorous, reproducible AI4Finance research.</p>
@@ -90,7 +90,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-5">
+<div class="project-card reveal reveal-delay-5">
   <span class="feature-badge badge-teal">NeurIPS 2023</span>
   <h3>TradeMaster: A Holistic Quantitative Trading Platform Empowered by Reinforcement Learning</h3>
   <p>A holistic platform covering data processing, environment simulation, RL agent training, and performance evaluation across multiple financial markets and trading tasks.</p>
@@ -101,7 +101,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-5">
+<div class="project-card reveal reveal-delay-5">
   <span class="feature-badge badge-teal">AAAI 2024</span>
   <h3>EarnHFT: Efficient Hierarchical Reinforcement Learning for High-Frequency Trading</h3>
   <p>Decomposes the HFT problem into macro-level strategy selection and micro-level order execution. The hierarchical structure yields significantly improved sample efficiency and live-trading profitability.</p>
@@ -110,7 +110,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-5">
+<div class="project-card reveal reveal-delay-5">
   <span class="feature-badge badge-teal">WWW 2024</span>
   <h3>EarnMore: Portfolio Management in Customizable Stock Pools</h3>
   <p>A maskable stock representation framework that enables RL agents to handle arbitrary stock universes with a single trained model — eliminating the need to retrain per pool.</p>
@@ -120,8 +120,8 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
-<div class="project-card reveal reveal-5">
-  <h3>True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning</h3>
+<div class="project-card reveal reveal-delay-5">
+  <h3>TWOSOME: True Knowledge Comes from Practice: Aligning LLMs with Embodied Environments via Reinforcement Learning</h3>
   <p>Aligns LLMs with interactive environments through reinforcement learning, enabling agents to acquire genuine knowledge through embodied practice rather than passive pretraining.</p>
   <div class="project-links">
     <a href="https://arxiv.org/abs/2401.14151" target="_blank">Paper</a>

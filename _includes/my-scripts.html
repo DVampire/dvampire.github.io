@@ -1,55 +1,89 @@
-{% comment %}
-<!--
-Example code for the CloudFlare mail protection script.
-CloudFlare will inject this on every page, but due to Hydejack's push state approach to page loading,
-it will only run on the initial page.
-The snippet below will run the code on every `hy-push-state-load` event instead.
--->
 <script>
-  document.getElementById('_pushState').addEventListener('hy-push-state-load', function (e) {
-    function e(e){
-      (console.error?console.error:console.log).call(console,e)
+(function() {
+  // ── IntersectionObserver scroll-reveal ──
+  function initReveal() {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      // fallback: show all immediately
+      els.forEach(function(el) { el.classList.add('visible'); });
+      return;
     }
 
-    function t(e){
-      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
-    }
-
-    function r(e,t){
-      var r=e.substr(t,2);return parseInt(r,16)
-    }
-
-    function n(e,n){
-      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
-        var l=r(e,a)^c;
-        o+=String.fromCharCode(l)
-      }
-      return t(o)
-    }
-
-    var o="/cdn-cgi/l/email-protection#",
-        c=".__cf_email__",
-        a="data-cfemail",
-        l=document.createElement("div");
-
-    !function(){
-      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
-        try{
-          var c=t[r],a=c.href.indexOf(o);
-          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
-        }catch(t){
-          e(t)
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
-    }(),
-    function(){
-      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
-        try{
-          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
-          o.parentNode.replaceChild(i,o)
-        }catch(t){
-          e(t)
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    els.forEach(function(el) { observer.observe(el); });
+  }
+
+  // ── CountUp animation for stat numbers ──
+  function countUp(el, target, duration) {
+    var start = 0;
+    var startTime = null;
+    var isFloat = String(target).indexOf('.') !== -1;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      // ease out cubic
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = eased * target;
+      el.textContent = isFloat
+        ? current.toFixed(1)
+        : Math.floor(current).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = isFloat ? target.toFixed(1) : target.toLocaleString();
+    }
+    requestAnimationFrame(step);
+  }
+
+  function initCountUp() {
+    var cards = document.querySelectorAll('.stat-card');
+    if (!cards.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        var numEl = entry.target.querySelector('.stat-number');
+        if (!numEl || numEl.dataset.counted) return;
+        numEl.dataset.counted = '1';
+        var raw = numEl.textContent.trim();
+        // handle suffixes like "5+"
+        var suffix = raw.replace(/[\d.,]/g, '');
+        var num = parseFloat(raw.replace(/[^\d.]/g, ''));
+        if (!isNaN(num)) {
+          numEl.textContent = '0';
+          countUp({ textContent: '0', set textContent(v) { numEl.textContent = v + suffix; } }, num, 1200);
         }
-    }()
-  });
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.5 });
+
+    cards.forEach(function(card) { observer.observe(card); });
+  }
+
+  function init() {
+    initReveal();
+    initCountUp();
+  }
+
+  // Run on initial load and on Hydejack push-state navigation
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  var pushState = document.getElementById('_pushState');
+  if (pushState) {
+    pushState.addEventListener('hy-push-state-load', init);
+  }
+})();
 </script>
-{% endcomment %}
