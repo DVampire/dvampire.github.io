@@ -8,9 +8,13 @@ tagline:               LLM Agents · AI4Finance · Self-Evolving Systems
 description:           Wentao Zhang's personal homepage.
 copyright:             © 2026. Wentao Zhang. All rights reserved.
 
+logo:                  /assets/img/profile.webp
+
 author:
   name:                Wentao Zhang
   picture:             /assets/img/profile.webp
+  email:               zhangwent963@gmail.com
+  github:              DVampire
 
 # 社交链接（侧栏底部图标）
 github:                DVampire
@@ -18,6 +22,8 @@ email:                 zhangwent963@gmail.com
 
 # 侧栏导航链接
 menu:
+  - title: Home
+    url: /
   - title: About
     url: /about/
   - title: Research
