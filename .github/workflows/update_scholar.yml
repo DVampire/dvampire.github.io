@@ -1,0 +1,73 @@
+name: Update Google Scholar Stats
+
+on:
+  schedule:
+    # Run every Monday at 08:00 UTC
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install scholarly
+        run: pip install scholarly
+
+      - name: Fetch Google Scholar stats
+        run: |
+          python3 - <<'EOF'
+          import sys
+          import re
+          from scholarly import scholarly
+
+          SCHOLAR_ID = "Zvtt7ZcAAAAJ"
+          OUTPUT = "_data/scholar_stats.yml"
+
+          try:
+              author = scholarly.search_author_id(SCHOLAR_ID)
+              author = scholarly.fill(author, sections=["basics", "indices", "publications"])
+
+              citations = author.get("citedby", 0)
+              hindex    = author.get("hindex", 0)
+              papers    = len(author.get("publications", []))
+
+              with open(OUTPUT) as f:
+                  content = f.read()
+
+              def replace(key, val):
+                  return re.sub(rf"^{key}:.*$", f"{key}: {val}", content, flags=re.MULTILINE)
+
+              content = replace("citations", citations)
+              content = replace("hindex",    hindex)
+              content = replace("papers",    papers)
+
+              from datetime import date
+              content = replace("last_updated", f'"{date.today().isoformat()}"')
+
+              with open(OUTPUT, "w") as f:
+                  f.write(content)
+
+              print(f"Updated: citations={citations}, hindex={hindex}, papers={papers}")
+          except Exception as e:
+              print(f"Failed to fetch stats: {e}", file=sys.stderr)
+              sys.exit(1)
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet _data/scholar_stats.yml || (
+            git add _data/scholar_stats.yml &&
+            git commit -m "chore: sync Google Scholar stats" &&
+            git push
+          )
