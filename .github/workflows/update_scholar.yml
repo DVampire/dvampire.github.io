@@ -19,26 +19,47 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install scholarly
-        run: pip install scholarly
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
 
       - name: Fetch Google Scholar stats
+        timeout-minutes: 2
         run: |
           python3 - <<'EOF'
           import sys
           import re
-          from scholarly import scholarly
+          import requests
+          from bs4 import BeautifulSoup
+          from datetime import date
 
           SCHOLAR_ID = "Zvtt7ZcAAAAJ"
           OUTPUT = "_data/scholar_stats.yml"
 
-          try:
-              author = scholarly.search_author_id(SCHOLAR_ID)
-              author = scholarly.fill(author, sections=["basics", "indices", "publications"])
+          HEADERS = {
+              "User-Agent": (
+                  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/124.0.0.0 Safari/537.36"
+              ),
+              "Accept-Language": "en-US,en;q=0.9",
+          }
 
-              citations = author.get("citedby", 0)
-              hindex    = author.get("hindex", 0)
-              papers    = len(author.get("publications", []))
+          try:
+              url = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en&cstart=0&pagesize=100"
+              r = requests.get(url, headers=HEADERS, timeout=30)
+              r.raise_for_status()
+              soup = BeautifulSoup(r.text, "html.parser")
+
+              # Citation table: cells order is
+              # [citations_all, citations_recent, hindex_all, hindex_recent, i10_all, i10_recent]
+              cells = soup.select("td.gsc_rsb_std")
+              if len(cells) < 3:
+                  print("Unexpected page structure — possibly blocked", file=sys.stderr)
+                  sys.exit(1)
+
+              citations = int(cells[0].text.replace(",", ""))
+              hindex    = int(cells[2].text.replace(",", ""))
+              papers    = len(soup.select("tr.gsc_a_tr"))
 
               with open(OUTPUT) as f:
                   content = f.read()
@@ -46,17 +67,16 @@ jobs:
               def replace(key, val):
                   return re.sub(rf"^{key}:.*$", f"{key}: {val}", content, flags=re.MULTILINE)
 
-              content = replace("citations", citations)
-              content = replace("hindex",    hindex)
-              content = replace("papers",    papers)
-
-              from datetime import date
+              content = replace("citations",    citations)
+              content = replace("hindex",       hindex)
+              content = replace("papers",       papers)
               content = replace("last_updated", f'"{date.today().isoformat()}"')
 
               with open(OUTPUT, "w") as f:
                   f.write(content)
 
               print(f"Updated: citations={citations}, hindex={hindex}, papers={papers}")
+
           except Exception as e:
               print(f"Failed to fetch stats: {e}", file=sys.stderr)
               sys.exit(1)
