@@ -79,6 +79,30 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   </div>
 </div>
 
+<div class="project-card reveal reveal-delay-4">
+  <span class="feature-badge badge-teal">KDD 2026</span>
+  <h3>AlphaForgeBench: Benchmarking LLMs as Quantitative Researchers</h3>
+  <p>Rather than asking LLMs to emit trading actions directly — which suffers from extreme run-to-run variance and irrational reversals — AlphaForgeBench repositions LLMs as <strong>quantitative researchers</strong> that generate executable alpha factors and strategy code, evaluated via standardized backtesting across 7 assets and 6 frontier models.</p>
+  <p>A 3×3 level-grade taxonomy of 903 queries (633 real-world + 270 augmented) reveals three persistent model archetypes and systematic difficulty scaling — providing a stable, reproducible foundation for LLM financial capability evaluation.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2602.18481" target="_blank">Paper</a>
+    <a href="https://github.com/finbrain-lab-hkustgz/AlphaForgeBench" target="_blank">GitHub</a>
+    <a href="https://finbrain-lab-hkustgz.github.io/AlphaForgeBench/" target="_blank">Project Page</a>
+  </div>
+</div>
+
+<div class="project-card reveal reveal-delay-4">
+  <span class="feature-badge badge-teal">AI4Finance · Prediction Markets</span>
+  <h3>PolyMonitor: Prediction Market Intelligence Workspace</h3>
+  <p>An open-source live intelligence workspace for Polymarket — consolidating market prices, on-chain flow, oracle activity, order-book depth, and macro context into a unified dashboard. Paired with the <strong>Polymarket Agent</strong>, a 10-node multi-agent forecasting pipeline combining deterministic evidence construction, LLM specialist agents, adversarial critique, and calibration.</p>
+  <p>The platform serves as the operational infrastructure for our <em>Unlocking the Forecasting Economy</em> dataset suite, covering the full prediction market lifecycle from listing through oracle resolution and settlement.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2604.20421" target="_blank">Paper</a>
+    <a href="https://github.com/virusLuke3/polymonitor" target="_blank">GitHub</a>
+    <a href="https://www.polymonitor.club/" target="_blank">Project Page</a>
+  </div>
+</div>
+
 <div class="project-card reveal reveal-delay-5">
   <span class="feature-badge badge-teal">KDD 2026</span>
   <h3>FinWorld: End-to-End Financial AI Platform</h3>

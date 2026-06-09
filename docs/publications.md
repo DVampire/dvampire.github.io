@@ -17,7 +17,11 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
   <div class="pub-title"><a href="https://arxiv.org/abs/2602.18481" target="_blank">AlphaForgeBench: Benchmarking End-to-End Trading Strategy Design with Large Language Models</a></div>
   <div class="pub-authors"><strong>Wentao Zhang</strong>, Mingxuan Zhao, Jincheng Gao, Jieshun You, Huaiyu Jia, Yilei Zhao, Bo An, Shuo Sun</div>
   <div class="pub-venue"><span class="venue-badge">KDD 2026</span></div>
-  <div class="pub-links"><a href="https://arxiv.org/abs/2602.18481" target="_blank">Paper</a></div>
+  <div class="pub-links">
+    <a href="https://arxiv.org/abs/2602.18481" target="_blank">Paper</a>
+    <a href="https://github.com/finbrain-lab-hkustgz/AlphaForgeBench" target="_blank">GitHub</a>
+    <a href="https://finbrain-lab-hkustgz.github.io/AlphaForgeBench/" target="_blank">Project Page</a>
+  </div>
 </div>
 
 <div class="pub-card">
@@ -41,7 +45,11 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
   <div class="pub-title"><a href="https://arxiv.org/abs/2604.20421" target="_blank">Unlocking the Forecasting Economy: A Suite of Datasets for the Full Lifecycle of Prediction Market</a></div>
   <div class="pub-authors">Huaiyu Jia, Luofeng Zhou, <strong>Wentao Zhang</strong>, Lin William Cong, Siguang Li, Shuo Sun</div>
   <div class="pub-venue">arXiv preprint arXiv:2604.20421</div>
-  <div class="pub-links"><a href="https://arxiv.org/abs/2604.20421" target="_blank">Paper</a></div>
+  <div class="pub-links">
+    <a href="https://arxiv.org/abs/2604.20421" target="_blank">Paper</a>
+    <a href="https://github.com/virusLuke3/polymonitor" target="_blank">GitHub</a>
+    <a href="https://www.polymonitor.club/" target="_blank">Project Page</a>
+  </div>
 </div>
 
 <div class="pub-card">
