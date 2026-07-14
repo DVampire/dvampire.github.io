@@ -40,6 +40,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   <p>The three domains under evolution — tools, skills, and agents — form a compounding stack: the ecosystem grows more capable through use rather than through releases.</p>
   <div class="project-links">
     <a href="https://github.com/DVampire/AgentEvolver" target="_blank">GitHub</a>
+    <a href="https://dvampire.github.io/AgentEvolver/" target="_blank">Project Page</a>
   </div>
 </div>
 

@@ -2,11 +2,11 @@
 layout: post
 title: "AgentEvolver: A Self-Evolving Agent Operating System"
 date: 2026-07-14
-description: We introduce AgentEvolver, a self-evolving multi-agent operating system where a MetaAgent orchestrates sub-agents to complete tasks, while optimizer, evaluator, and generator agents continuously improve the tool, skill, and agent ecosystem at runtime.
+description: We introduce AgentEvolver, a self-evolving multi-agent operating system where a MetaAgent orchestrates specialist sub-agents over an Agent Bus, while generator, evaluator, and optimizer agents continuously improve the tool, skill, and agent ecosystem at runtime.
 tags: [LLM Agents, Self-Evolution, Agent Operating System, Multi-Agent]
 ---
 
-We introduce **AgentEvolver** ([DVampire/AgentEvolver](https://github.com/DVampire/AgentEvolver)) — a **self-evolving agent operating system**. A central **MetaAgent** orchestrates specialized sub-agents to complete user tasks, while a set of *meta-level* agents — optimizers, evaluators, and generators — continuously improve the system's tools, skills, and agents themselves.
+We introduce **AgentEvolver** ([project page](https://dvampire.github.io/AgentEvolver/) · [GitHub](https://github.com/DVampire/AgentEvolver)) — a **self-evolving agent operating system**. A central **MetaAgent** orchestrates specialist sub-agents to complete user tasks, while a set of *meta-level* agents — generators, evaluators, and optimizers — continuously improve the system's tools, skills, and agents themselves. The design keeps an **immutable core** while making everything around it — components registered through 10+ registries — hot-pluggable and evolvable.
 
 ## From Static Agents to a Living System
 
@@ -20,11 +20,12 @@ AgentEvolver is organized into two cooperating planes.
 
 ### 1. The Execution Plane — MetaAgent + Sub-Agents
 
-The **MetaAgent** is the kernel-level orchestrator. Given a user task, it decomposes the goal, selects the right specialists, and coordinates them to completion. Sub-agents cover concrete capabilities such as:
+The **MetaAgent** is the kernel-level orchestrator. Given a user task, it decomposes the goal, selects the right specialists, and coordinates them over an **Agent Bus**. The specialist sub-agents cover complementary capabilities:
 
-- **Browser automation** — driving real web pages via Playwright / browser-use
-- **Code execution** — running and iterating on code in a sandboxed workspace
-- **Task processing** — decomposition, planning, and multi-step tool use
+- **Deep Researcher** — multi-step web research and evidence gathering
+- **Deep Analyzer** — reasoning and analysis over collected material
+- **Vibe Coding** — writing, running, and iterating on code in a sandboxed workspace
+- **Tool Calling** — general tool use and environment interaction
 
 Every run streams to a live **Trace UI**, so you can watch orchestration, tool calls, and reasoning unfold in real time — and afterwards inspect run state, workspace artifacts, and generated memory reports.
 
@@ -43,7 +44,7 @@ The three domains under evolution — **tools, skills, and agents** — form a c
 The OS framing is deliberate. AgentEvolver provides the same primitives a real OS does, but for agents:
 
 - **Process orchestration** — the MetaAgent schedules and coordinates sub-agents like a kernel scheduling processes.
-- **A managed resource layer** — tools, skills, and agents are first-class, versioned resources rather than hard-coded functions.
+- **A managed resource layer** — tools, skills, and agents are first-class resources registered through 10+ component registries rather than hard-coded functions, so new components hot-plug in around an immutable core.
 - **Centralized secret management** — API keys and credentials are handled through **Vault**, keeping secrets out of code and configuration.
 - **Observability** — the Trace UI and run artifacts give a system-wide view of everything the agents do.
 
@@ -51,7 +52,7 @@ On top of these primitives sits the distinguishing feature: a **self-evolution l
 
 ## Running It
 
-AgentEvolver runs on Python 3.12 with Vault for secrets. The entry point is `examples/run_meta_agent.py`, which supports a default task, an inline task via `--task`, or a task file from `examples/tasks/`. Model selection and other settings are overridable through `--cfg-options` (e.g. `model_name=openai/o3`), with defaults in `configs/meta_agent.py`.
+AgentEvolver runs on Python 3.12 with Vault for secrets. The entry point is `examples/run_meta_agent.py`, which supports a default task, an inline task via `--task`, or a task file from `examples/tasks/`. Model selection and other settings are overridable through `--cfg-options` (e.g. `model_name=openai/o3`), with defaults in `configs/meta_agent.py`. The framework ships with a suite of reasoning and agentic benchmarks out of the box — AIME, GPQA, GSM8K, HLE, LeetCode, and DeepWeb, among others.
 
 ## Connection to My Prior Work
 
@@ -61,4 +62,5 @@ It is one more step toward agents that genuinely improve through experience rath
 
 ## Links
 
+- **Project Page**: [dvampire.github.io/AgentEvolver](https://dvampire.github.io/AgentEvolver/)
 - **GitHub**: [DVampire/AgentEvolver](https://github.com/DVampire/AgentEvolver)
