@@ -31,6 +31,20 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
 
 <div class="project-card featured reveal reveal-delay-3">
   <span class="feature-badge badge-red">Featured · Self-Evolution</span>
+  <h3>AgentEvolver: A Self-Evolving Agent Operating System</h3>
+  <p>An agent framework reimagined as an operating system that rewrites its own userland. A central <strong>MetaAgent</strong> orchestrates specialized sub-agents (browser automation, code execution, task processing) to complete user tasks — while a dedicated <em>evolution plane</em> continuously improves the system itself.</p>
+  <ul>
+    <li><strong>Execution plane</strong> — the MetaAgent schedules and coordinates sub-agents like a kernel scheduling processes, with a live Trace UI for full observability</li>
+    <li><strong>Evolution plane</strong> — <em>optimizer</em>, <em>evaluator</em>, and <em>generator</em> agents run a closed loop that refines and synthesizes new tools, skills, and agents at runtime</li>
+  </ul>
+  <p>The three domains under evolution — tools, skills, and agents — form a compounding stack: the ecosystem grows more capable through use rather than through releases.</p>
+  <div class="project-links">
+    <a href="https://github.com/DVampire/AgentEvolver" target="_blank">GitHub</a>
+  </div>
+</div>
+
+<div class="project-card featured reveal reveal-delay-3">
+  <span class="feature-badge badge-red">Featured · Self-Evolution</span>
   <h3>Autogenesis: A Self-Evolving Agent Protocol</h3>
   <p>Autogenesis addresses a fundamental limitation of current LLM agent systems: they are static — prompts, tools, and behaviors fixed at design time cannot improve from experience.</p>
   <p>Two tightly coupled layers power the system:</p>
