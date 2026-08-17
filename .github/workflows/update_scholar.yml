@@ -1,9 +1,12 @@
 name: Update Google Scholar Stats
 
 on:
-  schedule:
-    # Run every Monday at 08:00 UTC
-    - cron: "0 8 * * 1"
+  # Scheduled runs disabled: Google Scholar returns 403 to GitHub Actions
+  # datacenter IPs, so the weekly cron only produced failure notifications.
+  # Stats are maintained by hand in _data/scholar_stats.yml; trigger this
+  # manually if you want to try an automatic fetch.
+  # schedule:
+  #   - cron: "0 8 * * 1"
   workflow_dispatch:
 
 permissions:
