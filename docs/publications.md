@@ -25,6 +25,13 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 </div>
 
 <div class="pub-card">
+  <div class="pub-title"><a href="https://arxiv.org/abs/2601.08676" target="_blank">Advancing ESG Intelligence: An Expert-level Agent and Comprehensive Benchmark for Sustainable Finance</a></div>
+  <div class="pub-authors">Yilei Zhao, <strong>Wentao Zhang</strong>, Lei Xiao, Yandan Zheng, Mengpu Liu, Wei Yang Bryan Lim</div>
+  <div class="pub-venue"><span class="venue-badge">EMNLP 2026</span></div>
+  <div class="pub-links"><a href="https://arxiv.org/abs/2601.08676" target="_blank">Paper</a></div>
+</div>
+
+<div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2602.10171" target="_blank">EvoCodeBench: A Human-Performance Benchmark for Self-Evolving LLM-Driven Coding Systems</a></div>
   <div class="pub-authors"><strong>Wentao Zhang</strong>, Jianfeng Wang, Liheng Liang, Yilei Zhao, HaiBin Wen, Zhe Zhao</div>
   <div class="pub-venue">arXiv preprint arXiv:2602.10171</div>
