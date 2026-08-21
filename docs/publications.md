@@ -35,6 +35,12 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 </div>
 
 <div class="pub-card">
+  <div class="pub-title">Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs</div>
+  <div class="pub-authors">Jiacheng Xu, <strong>Wentao Zhang</strong>, Zhiyi Lyu, Fuxiang Zhang, Chaojie Wang, Yang Liu, Bo An</div>
+  <div class="pub-venue"><span class="venue-badge">EMNLP 2026 Findings</span></div>
+</div>
+
+<div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2602.10171" target="_blank">EvoCodeBench: A Human-Performance Benchmark for Self-Evolving LLM-Driven Coding Systems</a></div>
   <div class="pub-authors"><strong>Wentao Zhang</strong>, Jianfeng Wang, Liheng Liang, Yilei Zhao, HaiBin Wen, Zhe Zhao</div>
   <div class="pub-venue">arXiv preprint arXiv:2602.10171</div>
