@@ -1,13 +1,13 @@
 ---
-layout: default
+layout: home
 title: Home
 description: >
   Wentao Zhang's personal homepage. Research Associate at NTU working on LLM Agents and Financial AI.
 ---
 
-<div class="reveal reveal-delay-1">
-  <h1 style="margin-bottom:0.1em;">Wentao Zhang</h1>
-  <p style="color:#888; margin-top:0; font-size:1em;">Research Associate &nbsp;·&nbsp; Nanyang Technological University</p>
+<div class="home-hero reveal reveal-delay-1">
+  <p class="home-eyebrow">Research Associate · Nanyang Technological University</p>
+  <h1>Wentao Zhang</h1>
 
   <p>
     Hi! I am Wentao Zhang, currently a Research Associate at
@@ -27,16 +27,14 @@ description: >
     through closed-loop experience and protocol-level self-modification.
   </p>
 
-  <p>
-    📧 <a href="mailto:zhangwent963@gmail.com">zhangwent963@gmail.com</a>
-    &nbsp;|&nbsp;
-    💻 <a href="https://github.com/DVampire" target="_blank">GitHub</a>
-    &nbsp;|&nbsp;
-    🎓 <a href="https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en" target="_blank">Google Scholar</a>
-  </p>
+  <nav class="profile-links" aria-label="Profile links">
+    <a href="mailto:zhangwent963@gmail.com">Email</a>
+    <a href="https://github.com/DVampire" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+  </nav>
 </div>
 
-<div class="stat-cards reveal reveal-delay-2">
+<div class="stat-cards reveal reveal-delay-2" aria-label="Research impact">
   <div class="stat-card">
     <span class="stat-number">{{ site.data.scholar_stats.citations }}</span>
     <span class="stat-label">Citations</span>
@@ -46,14 +44,18 @@ description: >
     <span class="stat-label">h-index</span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">{{ site.data.scholar_stats.papers }}</span>
-    <span class="stat-label">Papers</span>
+    <span class="stat-number">{{ site.data.scholar_stats.i10index }}</span>
+    <span class="stat-label">i10-index</span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">5+</span>
-    <span class="stat-label">Top Venues</span>
+    <span class="stat-number">{{ site.data.scholar_stats.papers }}</span>
+    <span class="stat-label">Publications</span>
   </div>
 </div>
+
+<p class="scholar-meta reveal reveal-delay-2">
+  Google Scholar metrics · Updated {{ site.data.scholar_stats.last_updated | date: "%b %-d, %Y" }}
+</p>
 
 <hr style="margin:2rem 0;">
 
@@ -62,7 +64,7 @@ description: >
   <div class="timeline">
     <div class="timeline-item news-accepted">
       <div class="timeline-date news-date-accepted">Aug 21, 2026</div>
-      <div class="timeline-title"><em>Two-Stage RL for Sound and Adversarial Test Generation</em> accepted at <strong>EMNLP 2026 Findings</strong></div>
+      <div class="timeline-title"><a href="https://arxiv.org/abs/2609.03955" target="_blank" rel="noopener noreferrer">Two-Stage RL for Sound and Adversarial Test Generation</a> accepted to <strong>Findings of EMNLP 2026</strong></div>
       <div class="timeline-sub">Two-stage reinforcement learning that trains code LLMs to generate sound and adversarial test cases.</div>
     </div>
     <div class="timeline-item news-accepted">
@@ -95,6 +97,11 @@ description: >
       <div class="timeline-title"><em>FinWorld</em> accepted at <strong>KDD 2026</strong></div>
       <div class="timeline-sub">An all-in-one platform for end-to-end financial AI research.</div>
     </div>
+  </div>
+
+  <details class="news-archive">
+    <summary>Earlier news (2023–2025)</summary>
+    <div class="timeline">
     <div class="timeline-item news-released">
       <div class="timeline-date news-date-released">Jun 14, 2025</div>
       <div class="timeline-title"><a href="https://arxiv.org/abs/2506.12508" target="_blank">AgentOrchestra</a> released</div>
@@ -130,7 +137,8 @@ description: >
       <div class="timeline-title"><em>EarnHFT</em> accepted at <strong>AAAI 2024</strong></div>
       <div class="timeline-sub">Efficient hierarchical reinforcement learning for high-frequency trading.</div>
     </div>
-  </div>
+    </div>
+  </details>
 </div>
 
 <hr style="margin:2rem 0;">

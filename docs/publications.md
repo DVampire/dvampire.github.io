@@ -5,9 +5,13 @@ permalink: /publications/
 description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforcement Learning.
 ---
 
-# Publications
-
-<p class="reveal reveal-delay-1" style="color:#888; font-size:0.9em;">See also <a href="https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+<div class="scholar-summary reveal reveal-delay-1" aria-label="Google Scholar metrics">
+  <a class="scholar-summary-source" href="https://scholar.google.com/citations?user=Zvtt7ZcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+  <span><strong>{{ site.data.scholar_stats.citations }}</strong> citations</span>
+  <span><strong>{{ site.data.scholar_stats.hindex }}</strong> h-index</span>
+  <span><strong>{{ site.data.scholar_stats.i10index }}</strong> i10-index</span>
+  <small>Updated {{ site.data.scholar_stats.last_updated | date: "%b %-d, %Y" }}</small>
+</div>
 
 <div class="reveal reveal-delay-2">
 
@@ -35,9 +39,10 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 </div>
 
 <div class="pub-card">
-  <div class="pub-title">Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs</div>
+  <div class="pub-title"><a href="https://arxiv.org/abs/2609.03955" target="_blank">Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs</a></div>
   <div class="pub-authors">Jiacheng Xu, <strong>Wentao Zhang</strong>, Zhiyi Lyu, Fuxiang Zhang, Chaojie Wang, Yang Liu, Bo An</div>
-  <div class="pub-venue"><span class="venue-badge">EMNLP 2026 Findings</span></div>
+  <div class="pub-venue"><span class="venue-badge">Findings of EMNLP 2026</span></div>
+  <div class="pub-links"><a href="https://arxiv.org/abs/2609.03955" target="_blank">Paper</a></div>
 </div>
 
 <div class="pub-card">

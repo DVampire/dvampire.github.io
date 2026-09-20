@@ -5,8 +5,6 @@ permalink: /research/
 description: Wentao Zhang's research on LLM Agents, Self-Evolving Agents, and Financial AI.
 ---
 
-# Research
-
 <div class="reveal reveal-delay-1">
 My research sits at the intersection of <strong>LLM-powered autonomous agents</strong> and <strong>Financial AI (AI4Finance)</strong>. A central theme is <strong>agent self-evolution</strong> — building systems that continuously improve themselves through closed-loop experience, resource versioning, and protocol-level self-modification.
 </div>
