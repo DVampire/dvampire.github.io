@@ -1,116 +1,122 @@
 ---
 layout: post
-title: "AgentEvolver: From Multi-Agent Execution to Trainable Trajectories"
+title: "AgentEvolver: Global Evolution for Complex Tasks"
 date: 2026-07-14
-description: AgentEvolver connects multi-agent task execution, evidence-driven capability evolution, and reward-annotated SFT/RL trajectories in one inspectable and reversible runtime.
-tags: [LLM Agents, Self-Evolution, Multi-Agent Systems, SFT, Reinforcement Learning]
+description: AgentEvolver is an open agent platform for planning, executing, and inspecting complex work while evolving eight kinds of capability through evidence-backed development.
+tags: [LLM Agents, Self-Evolution, Multi-Agent Systems, Agent Runtime, Reinforcement Learning]
 ---
 
-We introduce **AgentEvolver** ([project page](https://dvampire.github.io/AgentEvolver/) · [GitHub](https://github.com/DVampire/AgentEvolver)), a self-evolving multi-agent framework for complex engineering and research tasks.
+We introduce **AgentEvolver** ([project page](https://dvampire.github.io/AgentEvolver/index.html) · [GitHub](https://github.com/DVampire/AgentEvolver)), an open platform for building with agents and evolving the whole capability system around them.
 
-Most multi-agent systems focus on a single question: *how can several agents collaborate on the task in front of them?* AgentEvolver asks a second question: *when that task exposes a real capability gap, how can the missing method become a reusable component for future tasks?*
+Many agent frameworks optimize a single prompt, tool, or workflow. Real tasks expose a broader problem: sometimes the missing piece is an action; sometimes it is a method, a specialist, a workflow, a memory strategy, or a connection to an external system. AgentEvolver treats all of these as evolvable parts of one platform.
 
-The current release connects three layers that are often built separately:
+> **Build with agents. Evolve the whole system.**
 
-1. **Task execution** — a MetaAgent plans, delegates, reviews, and coordinates specialist agents in one project.
-2. **Capability evolution** — generators, evaluators, and optimizers create or improve versioned extensions when evidence shows that the existing system is insufficient.
-3. **Training data collection** — each run can become a reward-annotated trajectory for SFT or reinforcement-learning pipelines.
+The core loop is simple:
 
-> **Mental model:** AgentEvolver is a multi-agent task runtime, a versioned capability extension system, and an SFT/RL data flywheel.
+**Plan → Execute → Inspect → Evolve → Evaluate → Use again**
 
-## One System Loop
+A task enters through a **Living Plan**, runs through a controllable **Runtime**, and carries the right information through **Context & Memory**. When execution reveals a reusable capability gap, AgentEvolver can develop a versioned candidate, evaluate it against real calls, keep or roll it back, and record what happens when it is used again.
 
-AgentEvolver organizes work as an explicit loop:
+<figure>
+  <a href="https://dvampire.github.io/AgentEvolver/ui.html">
+    <img src="https://dvampire.github.io/AgentEvolver/assets/ui/workbench-overview.png" alt="AgentEvolver project workbench showing the living plan, runtime, workspace, and evolvable capabilities" loading="lazy">
+  </a>
+  <figcaption>One shared project: inspect the plan, runtime, files, capabilities, and evolution candidates from the AgentEvolver workbench.</figcaption>
+</figure>
 
-**Execute → Observe → Evaluate → Evolve → Collect**
+## Global Evolution Across Eight Entity Types
 
-- **Execute:** specialist agents work on the task in a shared session workspace.
-- **Observe:** an append-only event log records meaningful actions, results, failures, resource use, and agent communication.
-- **Evaluate:** tests, benchmarks, reviewers, and task-specific judges determine whether the output meets the required standard.
-- **Evolve:** a verified, reusable capability gap can trigger the creation or refinement of an extension.
-- **Collect:** the effective prompts, native tool calls, observations, token usage, and final reward are persisted as a trajectory.
+AgentEvolver does not reduce self-evolution to tool generation. It exposes one development lifecycle across eight kinds of capability:
 
-The final step in the longer-term loop is **train and serve**: use the collected trajectories to train or fine-tune models, evaluate candidate checkpoints, and feed an approved model back into the runtime. AgentEvolver already implements trajectory capture, reward backfilling, persistence, and SFT/RL export. Integrated weight training, checkpoint management, and model feedback remain roadmap items rather than hidden features of the current release.
+| Entity | What can evolve |
+| --- | --- |
+| **Tool** | A callable action with a clear input and output |
+| **Skill** | A reusable method, procedure, or set of instructions |
+| **Agent** | A specialist's role, behavior, and available capabilities |
+| **Workflow** | The order, branching, parallelism, and verification of work |
+| **Memory** | How experience is recorded, retrieved, and reused |
+| **Environment** | The execution setting and resources available to agents |
+| **Connector** | Access to an external API, service, or data source |
+| **Plugin** | A packaged combination of capabilities and integration logic |
 
-## Multi-Agent Execution
+These entities share a common lifecycle: identify a need, develop a candidate, evaluate it, decide whether to keep it, and observe later use. This gives the system room to change the *right layer* instead of forcing every problem into a new prompt or tool.
 
-At runtime, the **MetaAgent** decomposes a goal, delegates work through the **Agent Bus**, reviews returned results, and can send weak work back for another pass. Specialist agents cover areas such as coding, browser interaction, general task execution, research, analysis, and review.
+## A Foundation for Complex Work
 
-The underlying runtime treats a running agent as a mailbox with its own asynchronous loop. It supports direct requests, fire-and-forget messages, publish/subscribe communication, pausing, cancellation, and suspend/resume. A blocked sub-agent can escalate a question to its parent, park without consuming its step budget, and resume when guidance arrives instead of spinning or failing silently.
+Global evolution only helps if the underlying work can run reliably. AgentEvolver therefore builds on three foundations.
 
-This separation between runtime and protocol matters: the runtime controls how messages move, while the protocol defines what those messages mean. New specialists can therefore be introduced without adding another special case to the core execution loop.
+### Runtime
 
-## Evidence Before Evolution
+The Runtime coordinates focused workers, resident services, and event subscribers. Agents can exchange messages, share resources, and pause or resume at defined execution boundaries. Budgets, permissions, and cleanup remain visible to the coordinator instead of being hidden inside a monolithic agent loop.
 
-Self-evolution does **not** mean unrestricted self-modification. AgentEvolver deliberately makes “fix the task” the default response and reserves evolution for gaps supported by evidence.
+### Living Plan
 
-An evolution round is appropriate when the system encounters one of three situations:
+The plan is active state, not a static checklist produced at the beginning. It preserves the goal, current progress, blockers, evidence, and next decisions while work is underway. After context compaction, the latest plan summary returns to the active context so the agent can continue without losing direction. An approval gate can also separate planning from mutation when human review is required.
 
-- **Missing capability:** the task requires an operation that no existing component can perform.
-- **Recurring structural failure:** the same failure persists after explicit corrective guidance.
-- **Measured quality ceiling:** evaluation shows a systematic limitation and identifies a reusable method that is missing.
+### Context & Memory
 
-A first-time bug, transient tool error, unused existing capability, or tight execution budget should not trigger evolution. In those cases, the system should retry, repair the output, wire in what already exists, or finish the user's task.
+Long-running tasks need selective continuity rather than an endlessly growing transcript. AgentEvolver separates fixed task instructions, compacted history, recent interactions, the live plan, observations, and remaining budget. This keeps the next decision grounded while controlling context growth.
 
-When evolution is justified, three roles form a controlled engineering cycle:
+Together, these layers let both single-agent and multi-agent work continue across failures, handoffs, and long execution horizons.
 
-- A **generator** creates a new capability.
-- An **optimizer** improves an existing evolvable capability.
-- An **evaluator** compares the candidate against tests, benchmarks, replayed tasks, or a baseline.
+## Evidence-Backed Evolution
 
-Generated components live outside the hand-written core in an `extension/` tree. They are staged, versioned, evaluated, promoted, and—if they regress—rolled back or unloaded. This keeps the mutation surface explicit and preserves a clean boundary between trusted built-ins and evolved extensions.
+Self-evolution should not mean accepting every generated component. AgentEvolver makes improvement inspectable through five stages:
 
-The extension layer covers reusable **tools, skills, agents, connectors, environments, workflows, memory systems, and plugins**. Each component exposes a common schema through registry-driven managers, making capabilities discoverable and replaceable without coupling them to the runtime.
+1. **Observe** — identify a need and record a baseline.
+2. **Develop** — create or refine a versioned component.
+3. **Evaluate** — compare outcomes using executed calls and task evidence.
+4. **Decide** — keep, roll back, or unload the candidate.
+5. **Use again** — verify the component in subsequent work.
 
-## Every Run Can Become Training Data
+Evaluation records link a judgment to a specific version and the calls that produced the result. This distinction is important: registering a candidate proves only that it exists, not that it improves the system. Tasks that require verified improvement must also show that the accepted component was actually used and helped later execution.
 
-Capability evolution improves the runtime immediately; trajectory collection creates a path toward improving the model itself.
+## Work Alongside the Agents
 
-The `TrajectoryHook` records what actually happened during inference:
+The Web Workbench provides multiple views over the same project and backend:
 
-- the effective messages sent to the model after hooks and context compaction;
-- model reasoning and native tool calls;
-- observations, errors, and results returned by actions;
-- token usage and cost when available;
-- the task outcome and a reward that may arrive after evaluation.
+- **Overview** brings the Living Plan, runtime activity, workspace, capabilities, and candidates together.
+- **Chat** submits tasks and follows live execution events.
+- **Canvas** composes visual workflows.
+- **Code** opens the project in a browser-based development environment.
+- **Science** connects the same files to a live Jupyter kernel.
 
-Failures remain in the record. If a model fails twice and succeeds on the third attempt, the trajectory preserves all three attempts instead of presenting a fictional first-try success. Late evaluation rewards are backfilled into the steps that produced the outcome.
+Because the views share project state, an artifact produced by an agent can be opened in Code, analyzed in Science, and discussed in Chat without copying it between isolated interfaces. The user can inspect the work and take the next step at any point.
 
-Finished runs can be exported as OpenAI-style chat records for SFT or through a pluggable RL format, including a text-level VERL episode representation. This makes the execution trace more than telemetry: it becomes a faithful training example with state, action, observation, and reward.
+## From Websites to Scientific Work
 
-Exportability is not the same as readiness for training. Real trajectories may contain user text, file contents, tool arguments, external responses, and model reasoning, so production datasets still require consent and retention rules, redaction, deduplication, quality filtering, and train/evaluation leakage checks.
+The platform is designed around complete tasks rather than isolated model calls:
 
-## Inspectable by Design
+- **Website development:** build the site, browse the rendered result, and refine it from visual evidence.
+- **Game development:** build in Godot, inspect rendered scenes, and test the experience through engine controls.
+- **Research:** investigate sources, run computations, and verify conclusions against evidence.
 
-AgentEvolver makes the runtime understandable from both the browser and the filesystem.
+These examples require different tools and environments, but they use the same planning, runtime, context, evidence, and evolution model.
 
-Prompts, workflows, task documents, memory reports, and per-step snapshots are complete HTML documents. The same bytes used by the runtime can be opened, reviewed, diffed, and styled in a browser—there is no separate export representation that can drift from what the agent executed.
+## System Architecture
 
-The Web workbench provides several views over the same project:
+<figure>
+  <a href="https://dvampire.github.io/AgentEvolver/assets/arch.svg">
+    <img src="https://dvampire.github.io/AgentEvolver/assets/arch.svg" alt="AgentEvolver system architecture covering interfaces, orchestration, execution, infrastructure, capabilities, evolution, and training data" loading="lazy">
+  </a>
+  <figcaption>AgentEvolver connects user interfaces, orchestration, execution infrastructure, evolvable capabilities, and evidence-backed development in one architecture. Open the image for the full-resolution diagram.</figcaption>
+</figure>
 
-- **Overview** keeps the plan, runtime activity, capabilities, candidates, and files together.
-- **Chat** submits tasks and renders the live event log.
-- **Canvas** composes reusable visual workflows.
-- **Code** opens a browser-based VS Code environment over the session workspace.
-- **Science** provides a live Jupyter kernel over the same project files.
+Several engineering details support the complete loop:
 
-Because these surfaces share a project and backend, switching views does not create competing copies of state. A file written by an agent can be inspected in Code, analyzed in Science, and referenced from Chat in the same session.
+- **Programmatic tool use** expresses batches, loops, and branches in code while returning only selected results.
+- **Dynamic workflows** compose parallel work, checkpoints, verification, and recovery paths.
+- **Shared budgets and permissions** apply across parent and child agents with inherited ceilings.
+- **Trace and recovery** preserve request and action evidence and reconcile uncertain effects before continuing.
+- **Capabilities on demand** search the mounted catalog and expose relevant components for the next step.
+- **Data for SFT/RL** exports execution records with provenance and reward labels for downstream training.
 
-## Safety and Operational Boundaries
-
-An agent that can execute commands or propose new components needs enforcement mechanisms, not prompt-only advice. AgentEvolver separates several controls:
-
-- **Permission modes** determine whether a capability is allowed to perform a mutating operation.
-- **Plan mode** permits reading and reasoning while refusing mutation until a person approves the plan.
-- **Sandboxes** constrain where commands run, which paths are mounted, and which network destinations are reachable.
-- **Budgets** enforce step, token, and wall-time ceilings while exposing the remaining budget to the model.
-- **Versioning and rollback** limit the impact of a bad extension, although reversibility is not proof that a component is safe or correct.
-
-These boundaries make AgentEvolver a better fit for long-running engineering, data, and scientific workflows—where reusable methods, coordination, and auditability justify the additional machinery—than for simple Q&A or latency-sensitive one-step automation.
+Training data is therefore one output of the platform rather than its organizing principle. The more immediate objective is to finish the current task, make the result inspectable, and preserve any demonstrated improvement for the next one.
 
 ## Getting Started
 
-AgentEvolver supports Python 3.11 or newer. The shortest local path is:
+Clone the repository and run the installer:
 
 ```bash
 git clone https://github.com/DVampire/AgentEvolver.git
@@ -119,32 +125,25 @@ bash scripts/install.sh
 conda activate agentos
 ```
 
-If Conda is unavailable, the installer also supports `bash scripts/install.sh --uv`. After configuring a model provider in `.env`, run a small task first:
+Set `LLM_HUB_API_BASE` and `LLM_HUB_API_KEY` in a local `.env` file for the provided examples. Other model providers can be selected through configuration. Then start with a small, verifiable task:
 
 ```bash
 python examples/run_meta_agent.py \
-  --task "Reverse a string and add unit tests"
+  --task "Build a useful tool and verify it."
 ```
 
-Task documents can also be loaded from HTML files:
+The same platform can then mount browser, code, scientific-computing, sandbox, or game-development environments as the task demands.
 
-```bash
-python examples/run_meta_agent.py \
-  --task-file examples/tasks/qsar_egfr_experiment.html
-```
+## Why AgentEvolver
 
-For an interactive terminal use `agentevolver tui --config configs/meta_agent.py`; for the full workbench use `bash scripts/serve-ui.sh`. Optional browser, sandbox, desktop, and remote-machine capabilities can be added when the task requires them.
+AgentEvolver brings together ideas from [**AgentOrchestra**](https://arxiv.org/abs/2506.12508) and [**Autogenesis**](https://arxiv.org/abs/2604.15034), then extends them into a shared platform for execution and capability development.
 
-## Connection to My Prior Work
+The long-term goal is not an agent that rewrites itself without constraint. It is a system that can locate the right capability boundary, propose a versioned improvement, test it against real work, preserve the evidence, and safely reuse what proved useful.
 
-AgentEvolver brings together ideas from [**AgentOrchestra**](https://arxiv.org/abs/2506.12508) and [**Autogenesis**](https://arxiv.org/abs/2604.15034). AgentOrchestra explored hierarchical orchestration and first-class agent resources; Autogenesis studied controlled self-evolution through versioned resources. AgentEvolver turns those ideas into a working runtime where execution, evaluation, reversible component evolution, and training-data collection share one system boundary.
+## Explore
 
-The immediate goal is practical: finish today's task and preserve the reusable improvement. The longer-term goal is a closed loop in which successful behavior becomes training data, approved model updates return to serving, and the next generation of tasks produces better experience again.
-
-## Links
-
-- **Project overview:** [dvampire.github.io/AgentEvolver](https://dvampire.github.io/AgentEvolver/)
-- **Tutorial:** [From nothing to a trajectory](https://dvampire.github.io/AgentEvolver/tutorial.html)
-- **Architecture:** [One log, two readings](https://dvampire.github.io/AgentEvolver/architecture.html)
-- **Web workbench:** [Feature tour](https://dvampire.github.io/AgentEvolver/ui.html)
+- **Project overview:** [Global evolution for complex tasks](https://dvampire.github.io/AgentEvolver/index.html)
+- **Architecture:** [System architecture guide](https://dvampire.github.io/AgentEvolver/architecture.html)
+- **Web Workbench:** [Interactive feature tour](https://dvampire.github.io/AgentEvolver/ui.html)
+- **Evolution demos:** [Watch complete evolution workflows](https://dvampire.github.io/AgentEvolver/demos.html)
 - **Source code:** [DVampire/AgentEvolver](https://github.com/DVampire/AgentEvolver)
