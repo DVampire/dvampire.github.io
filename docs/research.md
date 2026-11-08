@@ -18,7 +18,7 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
   <li><strong>Self-Evolving Agents</strong> — Protocols and architectures enabling agents to evolve their own prompts, tools, memory, and sub-agents autonomously</li>
   <li><strong>LLM Agents &amp; Multi-Agent Orchestration</strong> — Hierarchical frameworks, tool use, long-horizon planning, and standardized agent communication protocols</li>
   <li><strong>General Computer Control</strong> — Foundation agents that operate arbitrary software using only pixels and natural language</li>
-  <li><strong>AI4Finance</strong> — End-to-end financial platforms, algorithmic trading, portfolio management, and HFT via RL and LLMs</li>
+  <li><strong>AI4Finance</strong> — Corporate disclosure review, end-to-end financial platforms, algorithmic trading, portfolio management, and HFT via RL and LLMs</li>
   <li><strong>Reinforcement Learning</strong> — Deep RL for sequential decision-making in complex, partially observable environments</li>
 </ul>
 </div>
@@ -26,6 +26,18 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
 ---
 
 ## Featured Projects
+
+<div class="project-card featured reveal reveal-delay-3">
+  <span class="feature-badge badge-teal">Featured · Financial AI · Self-Evolution</span>
+  <h3>FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision</h3>
+  <p>An interactive benchmark and agent framework grounded in historical SEC correspondence: <strong>380 review tasks</strong> from <strong>96 companies</strong>, evaluated against <strong>6,099 requirements</strong>.</p>
+  <p>A <strong>Reviewer</strong> discovers disclosure deficiencies, while a <strong>Filer</strong> acquires supported company facts and commits revisions. Independent evaluation checks the final artifacts, then turns feedback into role-specific procedures for subsequent cases, without updating model weights.</p>
+  <p>On the evaluated stream, evolution improves requirement fulfillment from <strong>24.28% to 27.96%</strong> and full comment resolution from <strong>16.90% to 20.75%</strong>, with a 5.8% increase in total cost over the fixed-policy variant.</p>
+  <div class="project-links">
+    <a href="https://arxiv.org/abs/2610.37905" target="_blank" rel="noopener noreferrer">Paper</a>
+    <a href="{% post_url 2026-10-27-filingloop %}">Blog</a>
+  </div>
+</div>
 
 <div class="project-card featured reveal reveal-delay-3">
   <span class="feature-badge badge-red">Featured · Self-Evolution</span>

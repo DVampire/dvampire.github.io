@@ -18,6 +18,16 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 <div class="pub-year-heading">2026</div>
 
 <div class="pub-card">
+  <div class="pub-title"><a href="https://arxiv.org/abs/2610.37905" target="_blank" rel="noopener noreferrer">FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision</a></div>
+  <div class="pub-authors"><strong>Wentao Zhang</strong>, Yilei Zhao, Guangyan Gan, Shuo Sun, Lin William Cong</div>
+  <div class="pub-venue">arXiv preprint arXiv:2610.37905</div>
+  <div class="pub-links">
+    <a href="https://arxiv.org/abs/2610.37905" target="_blank" rel="noopener noreferrer">Paper</a>
+    <a href="{% post_url 2026-10-27-filingloop %}">Blog</a>
+  </div>
+</div>
+
+<div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2602.18481" target="_blank">AlphaForgeBench: Benchmarking End-to-End Trading Strategy Design with Large Language Models</a></div>
   <div class="pub-authors"><strong>Wentao Zhang</strong>, Mingxuan Zhao, Jincheng Gao, Jieshun You, Huaiyu Jia, Yilei Zhao, Bo An, Shuo Sun</div>
   <div class="pub-venue"><span class="venue-badge">KDD 2026</span></div>
