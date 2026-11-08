@@ -18,6 +18,13 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 <div class="pub-year-heading">2026</div>
 
 <div class="pub-card">
+  <div class="pub-title"><a href="https://arxiv.org/abs/2506.12508" target="_blank">AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol</a></div>
+  <div class="pub-authors"><strong>Wentao Zhang</strong>, Liang Zeng, Yuzhen Xiao, Yongcong Li, Ce Cui, Yilei Zhao, Rui Hu, Yang Liu, Yahui Zhou, Bo An</div>
+  <div class="pub-venue"><span class="venue-badge">NeurIPS 2026 AgenticOS Workshop</span></div>
+  <div class="pub-links"><a href="https://arxiv.org/abs/2506.12508" target="_blank">Paper</a></div>
+</div>
+
+<div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2610.37905" target="_blank" rel="noopener noreferrer">FilingLoop: Evaluating and Evolving LLM Agents for Corporate Disclosure Review and Revision</a></div>
   <div class="pub-authors"><strong>Wentao Zhang</strong>, Yilei Zhao, Guangyan Gan, Shuo Sun, Lin William Cong</div>
   <div class="pub-venue">arXiv preprint arXiv:2610.37905</div>
@@ -102,13 +109,6 @@ description: Wentao Zhang's publications in LLM Agents, AI4Finance, and Reinforc
 </div>
 
 <div class="pub-year-heading">2025</div>
-
-<div class="pub-card">
-  <div class="pub-title"><a href="https://arxiv.org/abs/2506.12508" target="_blank">AgentOrchestra: Orchestrating Hierarchical Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol</a></div>
-  <div class="pub-authors"><strong>Wentao Zhang</strong>, Liang Zeng, Yuzhen Xiao, Yongcong Li, Ce Cui, Yilei Zhao, Rui Hu, Yang Liu, Yahui Zhou, Bo An</div>
-  <div class="pub-venue">arXiv preprint arXiv:2506.12508</div>
-  <div class="pub-links"><a href="https://arxiv.org/abs/2506.12508" target="_blank">Paper</a></div>
-</div>
 
 <div class="pub-card">
   <div class="pub-title"><a href="https://arxiv.org/abs/2403.03186" target="_blank">Cradle: Empowering Foundation Agents towards General Computer Control</a></div>

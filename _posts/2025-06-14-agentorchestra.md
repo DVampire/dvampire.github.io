@@ -1,10 +1,13 @@
 ---
 layout: post
-title: "AgentOrchestra: Hierarchical Multi-Agent Orchestration with the TEA Protocol"
+title: "AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol"
 date: 2025-06-14
+last_modified_at: 2026-11-09
 description: We propose the Tool-Environment-Agent (TEA) protocol and AgentOrchestra, a hierarchical multi-agent framework that achieves 89.04% on GAIA — state-of-the-art on general-purpose agent benchmarks.
 tags: [LLM Agents, Multi-Agent Systems, Benchmarks]
 ---
+
+> **Update (November 9, 2026):** AgentOrchestra has been accepted to the **NeurIPS 2026 AgenticOS Workshop**.
 
 We introduce **AgentOrchestra**, a hierarchical multi-agent framework built on the **Tool-Environment-Agent (TEA) protocol**, achieving **89.04% on GAIA** — establishing state-of-the-art performance on general-purpose agent benchmarks.
 

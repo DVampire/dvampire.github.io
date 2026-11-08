@@ -85,8 +85,8 @@ My research sits at the intersection of <strong>LLM-powered autonomous agents</s
 </div>
 
 <div class="project-card reveal reveal-delay-4">
-  <span class="feature-badge badge-teal">Multi-Agent · GAIA SOTA</span>
-  <h3>AgentOrchestra: Hierarchical Multi-Agent Orchestration with the TEA Protocol</h3>
+  <span class="feature-badge badge-teal">NeurIPS 2026 · AgenticOS Workshop</span>
+  <h3>AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol</h3>
   <p>The Tool-Environment-Agent (TEA) protocol treats environments, agents, and tools as <strong>first-class resources</strong> with explicit lifecycles and versioned interfaces — solving the fragile, ad-hoc wiring that plagues most multi-agent systems.</p>
   <p>AgentOrchestra builds on TEA with a central planner that dynamically spawns and coordinates specialist sub-agents (web navigation, data analysis, file operations). It achieves <strong>89.04% on GAIA</strong>, establishing state-of-the-art performance on general-purpose agent benchmarks.</p>
   <div class="project-links">
